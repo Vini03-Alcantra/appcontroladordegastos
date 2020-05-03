@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:moneymanagement/ui/cartoes.dart';
+import 'package:moneymanagement/ui/components/cabecalho.dart';
 import 'package:moneymanagement/ui/components/drawer.dart';
 import 'package:moneymanagement/ui/components/icon_menu_page.dart';
 import 'package:moneymanagement/ui/components/upcoming_card.dart';
@@ -36,38 +37,7 @@ class _HomeState extends State<Home> {
                     decoration: BoxDecoration(color: primaryColor),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 20.0,) ,
-                  child: Row( 
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text("2000", style: TextStyle(color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold),),
-                          SizedBox(height: 15,),
-                          Text("Available Balance", style: TextStyle(color: Colors.white, fontSize: 14)),
-                        ],
-                      ),
-                      Material(
-                        elevation: 1.0,
-                        borderRadius: BorderRadius.circular(100.0),
-                        color: Colors.purple,
-                        child: MaterialButton(                          
-                          onPressed: (){
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) => Dashboard()
-                            ));
-                          }, 
-                          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-                          child: Text("Top Up", style: TextStyle(fontSize: 16, color: Colors.white),),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-
+                CabecalhoMenuHomePage(),
                 //FIm de informações abaixo do cabeçlho
                 
                 //Início de container com menu
