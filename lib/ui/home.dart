@@ -5,6 +5,7 @@ import 'package:moneymanagement/ui/components/cabecalho.dart';
 import 'package:moneymanagement/ui/components/drawer.dart';
 import 'package:moneymanagement/ui/components/icon_menu_page.dart';
 import 'package:moneymanagement/ui/components/upcoming_card.dart';
+import 'package:moneymanagement/ui/consumista/consumista_page.dart';
 import 'package:moneymanagement/ui/dashboard.dart';
 
 class Home extends StatefulWidget {
@@ -66,7 +67,7 @@ class _HomeState extends State<Home> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               IconMenuPage(Icons.credit_card, "cartão", Cartoes()),
-                              IconMenuPage(Icons.person_outline, "consumista", null),
+                              IconMenuPage(Icons.person_outline, "consumista", ConsumistaPage()),
                               IconMenuPage(Icons.shopping_cart, "Compras", null),
                             ],
                           ),
