@@ -18,9 +18,9 @@ class _LoginPageState extends State<LoginPage> {
     GlobalKey<FormState> _formKey = GlobalKey();
     return Scaffold(
       
-      body: Form(
-        key: _formKey,
-        child: SingleChildScrollView(          
+      body:  SingleChildScrollView(
+        child: Form(
+          key: _formKey,
           child: Container(
             width: double.maxFinite,
             height: double.maxFinite,
