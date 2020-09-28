@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:moneymanagement/constants/routes.dart';
 import 'package:moneymanagement/ui/home.dart';
 
 class LoginPage extends StatefulWidget {
@@ -109,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                                 child: Text("Login", style: TextStyle(color: Colors.white)),
                                 onPressed: (){
                                   if(_formKey.currentState.validate()){
-                                    
+                                    Navigator.pushNamed(context, HomeRoute);
                                   }
                                   
                                 },
