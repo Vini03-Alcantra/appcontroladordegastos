@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:moneymanagement/ui/home.dart';
-import 'package:moneymanagement/ui/login_page.dart';
+import 'package:moneymanagement/constants/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple
       ),
-      home: LoginPage(),
+      onGenerateRoute: generateRoute,
+      initialRoute: LoginPageRoute,
     );
   }
 }
